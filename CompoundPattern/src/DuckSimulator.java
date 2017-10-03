@@ -45,10 +45,9 @@ public class DuckSimulator {
 		// 创建观察对象，这个测试案例中，只有此一个观察者对象,所有鸭子的变化都要通知该观察者
 		QuackLogist ql = new QuackLogist();
 		flock.registerObserver(ql);
-		flock.notifyObservers();
-
 		simulate(flock);
-
+		flock.notifyObservers();
+		
 		System.out.println("\n The ducks quacked :  "+QuackCounterDecorater.getQuacks()+" times!");
 
 	}
